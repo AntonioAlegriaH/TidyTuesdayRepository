@@ -16,6 +16,5 @@ Questions, criticism, and opinions are more than welcome. 🧉
 
 [R4DS Repo](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-13)
 
+[![](plot-images/2022-12-13-retail-sales.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidytuesday_2022-12-13-retail-sales.R)
 
-
-[![](<img src="images/2022-12-13-retail-sales.png" alt="" width="1200px" height="1200px"/>)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidytuesday_2022-12-13-retail-sales.R)
