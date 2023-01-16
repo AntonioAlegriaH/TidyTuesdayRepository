@@ -16,7 +16,7 @@ Questions, criticism, and opinions are more than welcome. 🧉
 
 [R4DS Repo](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-10/readme.md)
 
-[[](plot-images/2022-01-10-feederwatch)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-10-feederwatch.R)
+[[](plot-images/2023-01-10-feederwatch)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-10-feederwatch.R)
 
 
 ## 2022-12-13 Retail Sales
