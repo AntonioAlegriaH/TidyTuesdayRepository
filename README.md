@@ -10,16 +10,6 @@ Be careful when running my scripts, most of them were made in less than 24 hrs.
 Questions, criticism, and opinions are more than welcome. 🧉
 
 
-## 2023-01-31 Pet Cats UK
-
->Between 2013 and 2017, Roland Kays et al. convinced hundreds of volunteers in the U.S., U.K., Australia, and New Zealand to strap GPS sensors on their pet cats. The aforelinked datasets include each cat’s characteristics (such as age, sex, neuter status, hunting habits) and time-stamped GPS pings.
-
-[R4DS Repo](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-31/readme.md)
-
-[![](plot-images/2023-01-31-pet-cats-uk.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-31-cats_uk_dash.Rmd)
-
-
-
 ## 2023-01-10 Project FeederWatch 
 
 >FeederWatch is a November-April survey of birds that visit backyards, nature centers, community areas, and other locales in North America. Citizen scientists could birds in areas with plantings, habitat, water, or food that attracts birds. The schedule is completely flexible. People count birds as long as they like on days of their choosing, then enter their counts online. This allows anyone to track what is happening to birds around your home and to contribute to a continental data-set of bird distribution and abundance.
