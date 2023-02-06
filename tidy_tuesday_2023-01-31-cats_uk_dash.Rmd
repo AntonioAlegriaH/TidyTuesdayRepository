@@ -1,0 +1,286 @@
+---
+title: "PET CATS: UK"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    social: [ "twitter", "facebook", "menu" ]
+    source_code: embed
+    navbar:
+      - { title: "return", href: "https://antonioalegria.io/blog", align: right }
+    theme: 
+      version: 4
+      bg: "#f1f1f1"
+      fg: "#333333" 
+      primary: "#58a4b0"
+      navbar-bg: "#58a4b0"
+      base_font: 
+        google: Oswald
+      heading_font:
+        google: Anton
+      
+---
+
+```{css styling}
+
+.navbar-dark .navbar-brand, .navbar.navbar-inverse .navbar-brand {
+    color: #333;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration-line: underline overline;
+    text-emphasis: filled double-circle;
+    text-emphasis-style: filled double-circle;
+    text-emphasis-color: #333;
+    text-emphasis-position: under right;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+blockquote {
+    margin-top: 5px;
+    border-left: 0.25rem solid #CBCBCB;
+    padding-right: 650px;
+    text-size: .7rem;
+    color: #333;
+}
+
+
+.chart-wrapper, .nav-tabs-custom, .sbframe-commentary {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(88, 164, 176, 0.7);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+
+.chart-title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #555555;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 7px 10px 4px;
+    text-shadow: 0 0 5px #f1f1f1;
+}
+
+
+
+```
+
+
+
+```{r setup, include=FALSE}
+pacman::p_load(flexdashboard,
+               dplyr,
+               tidyr,
+               sf,
+               sp,
+               lubridate,
+               scales,
+               ggplot2,
+               rnaturalearth, 
+               install = FALSE,
+               leaflet, 
+               htmltools, 
+               units,
+               echarts4r,
+               g2r
+               )
+
+# Import Data:
+cats_uk <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk.csv')
+
+cats_uk_reference <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-01-31/cats_uk_reference.csv')
+
+# Create a SpatialPointsDataFrame
+# I need this to create a coordinate system to create an sf
+coordinates(cats_uk) = ~location_long+location_lat
+
+cats_sf <- st_as_sf(cats_uk)
+st_crs(cats_sf) = 4326 # Set CRS
+
+# get the 17866 observations marked as NO outliers
+# Maarked by an algorithm or manually
+
+cats_lines_filtered <- cats_sf %>% 
+  filter(algorithm_marked_outlier == "FALSE" & 
+           manually_marked_outlier == "FALSE") %>% 
+  group_by(tag_id) %>% 
+  summarise(mean_ground_speed = round(mean(ground_speed),1),
+            do_union = FALSE) %>% 
+  sf::st_cast("LINESTRING") %>% 
+  mutate(distance_m = round(st_length(.$geometry, ), 1)
+         )
+
+# Join with reference data
+
+cats_lines_join <- left_join(cats_lines_filtered, 
+                             cats_uk_reference, 
+                             by = "tag_id") %>% 
+  mutate(animal_sex_recode = recode_factor(animal_sex,
+                                           m = "Male",
+                                           f = "Female"))
+
+# Transform units
+units(cats_lines_join$distance_m) <- "km"
+
+# round and drop units 
+cats_lines_join$distance_m <- round(cats_lines_join$distance_m, 
+                                    digits = 1) %>% 
+  drop_units()
+
+# Palettes
+factpal <- colorFactor(palette = "Set1",
+                       cats_lines_join$tag_id)
+
+
+
+my_colors <- RColorBrewer::brewer.pal(9, "YlGnBu")[3:9]
+
+numpal <- colorNumeric(
+  palette = my_colors,
+  domain = cats_lines_join$distance_m)
+
+# Hacky way to invert the legend 
+numpal_hack <- colorNumeric(
+  reverse = TRUE,
+  palette = my_colors,
+  domain = cats_lines_join$distance_m
+)
+
+# labels
+
+labels <- sprintf(
+  "<strong>Cat Name: %s</strong><br/>
+  Age: %s Years<br/>
+  Distance: %s km<br/>
+  Mean Ground Speed: %s m/s<br/>
+  Prey per Month: %s<br/>
+  Sex: %s<br/>
+  Hours indoors per day: %s<br/>",
+  cats_lines_join$animal_id, 
+  cats_lines_join$age_years,
+  cats_lines_join$distance_m,
+  cats_lines_join$mean_ground_speed, 
+  cats_lines_join$prey_p_month,
+  cats_lines_join$animal_sex_recode,
+  cats_lines_join$hrs_indoors) %>%
+  lapply(htmltools::HTML)
+
+
+#map 
+
+map_cats_paths <- cats_lines_join %>% 
+  leaflet() %>% 
+  addProviderTiles("CartoDB.Positron") %>% 
+  addPolylines(weight = 7, 
+               color = ~factpal(tag_id),
+               label = labels,
+               highlightOptions = highlightOptions(
+                 weight = 5,
+                 color = "red",
+                 fillOpacity = 1,
+                 bringToFront = TRUE),
+               labelOptions = labelOptions(
+                 style = list("font-weight" = "normal", 
+                              padding = "3px 8px"),
+                 textsize = "17px",
+                 direction = "auto")
+                )
+
+
+map_cats_paths <- cats_lines_join %>% 
+  leaflet() %>% 
+  addProviderTiles("CartoDB.Positron") %>% 
+  addPolylines(weight = 7, 
+               color = ~numpal(distance_m),
+               label = labels,
+               highlightOptions = highlightOptions(
+                 weight = 5,
+                 color = "red",
+                 fillOpacity = 1,
+                 bringToFront = TRUE),
+               labelOptions = labelOptions(
+                 style = list("font-weight" = "normal", 
+                              padding = "3px 8px"),
+                 textsize = "17px",
+                 direction = "auto")
+                ) %>% 
+  addLegend(pal = numpal_hack, values = ~distance_m, 
+            opacity = .6, title = "Dsitance Travel in km",
+            position = "topleft",
+            labFormat = labelFormat(suffix = "km", 
+                                    transform = function(x) sort(x, decreasing = TRUE))
+            ) %>% 
+  addMiniMap(tiles = providers$CartoDB.Positron)
+    
+
+
+top_10<- cats_lines_join %>% 
+  slice_max(order_by = distance_m, n = 10) %>% 
+  rename("Distance Km" = distance_m) %>% 
+  as_tibble()
+
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### GPS Tracking: Cats Movement 
+Between 2013 and 2017, Roland Kays et al. convinced hundreds of volunteers in the U.S., U.K., AUS, and NZ to strap GPS sensors on their pet cats. Datasets include each cat’s characteristics (such as age, sex, neuter status, hunting habits) and time-stamped GPS pings.
+```{r}
+
+map_cats_paths
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Total travel distance according to age
+
+```{r}
+cats_lines_join |> 
+  group_by(animal_reproductive_condition)|>
+  e_charts(age_years) |> 
+  e_scatter(distance_m, symbol_size = 10) |>
+  e_legend(show = TRUE) |> # hide legend
+  e_format_y_axis(suffix = "Km",
+                  splitLine = list(show = FALSE)) |> 
+  e_format_x_axis(suffix = "Years",
+                  splitLine = list(show = FALSE))|> 
+  e_theme("infographic")|> 
+  e_grid(height = "70%",top = "8%", left = "20%") %>% 
+   e_tooltip(
+    axisPointer = list(
+      type = "cross"
+    )
+  ) 
+
+```
+
+### Top 10 Cats: With the most km
+
+```{r}
+
+top_10 %>% 
+  arrange(desc(-`Distance Km`)) %>% 
+  e_chart(animal_id) %>% 
+  e_bar(`Distance Km`,
+        itemStyle = list(borderRadius = 5,
+                         borderColor= '#fff',
+                         borderWidth= 2)
+        ) %>% 
+  e_format_y_axis(suffix = "km", splitLine = list(show = FALSE) )  %>%
+  e_flip_coords() %>% 
+  e_legend(show = FALSE) |> # hide legend
+  e_grid(width = "60%", left = "25%",
+         height = "80%", top = "0%") %>% 
+  e_color(color = "#58a4b0") %>% 
+  e_tooltip(trigger = "item")
+
+```
+
