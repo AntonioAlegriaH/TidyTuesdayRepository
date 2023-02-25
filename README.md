@@ -9,6 +9,17 @@ You can Join the R4DS Online Learning Community in the weekly  [#TidyTuesday](ht
 Be careful when running my scripts, most of them were made in less than 24 hrs. 
 Questions, criticism, and opinions are more than welcome. 🧉
 
+## 2023-02-21 Bob Ross Paintings
+
+> The data this week comes from Jared Wilber's data on [Bob Ross Paintings](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv) via @frankiethull [{BobRossColors}](https://github.com/frankiethull/BobRossColors) data package.
+
+
+[R4DS Repo](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-02-21/readme.md)
+
+[![](plot-images/2023-02-21-bob-ross-colors.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-02-21-bob_ross_colors.R)
+
+
+
 ## 2023-01-31 Pet Cats UK 🐈 🇬🇧
 
 >Between 2013 and 2017, Roland Kays et al. convinced hundreds of volunteers in the U.S., U.K., Australia, and New Zealand to strap GPS sensors on their pet cats. The aforelinked datasets include each cat’s characteristics (such as age, sex, neuter status, hunting habits) and time-stamped GPS pings.
