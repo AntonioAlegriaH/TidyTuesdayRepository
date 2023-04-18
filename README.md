@@ -9,6 +9,18 @@ You can Join the R4DS Online Learning Community in the weekly  [#TidyTuesday](ht
 Be careful when running my scripts, most of them were made in less than 24 hrs. 
 Questions, criticism, and opinions are more than welcome. 🧉
 
+
+## 2023-03-11 US Egg Production
+
+
+The data this week comes from [The Humane League's US Egg Production](https://thehumaneleague.org/article/E008R01-us-egg-production-data) dataset by [Samara Mendez](https://samaramendez.github.io/)
+
+>In this project, they synthesize an analysis-ready data set that tracks cage-free hens and the supply of cage-free eggs relative to the overall numbers of hens and table eggs in the United States. The data set is based on reports produced by the United States Department of Agriculture (USDA), which are published weekly or monthly. 
+
+
+[![](plot-images/2023-03-11-us-eggs-production.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-03-11-us_egg_production.R)
+
+
 ## 2023-02-21 Bob Ross Paintings
 
 > The data this week comes from Jared Wilber's data on [Bob Ross Paintings](https://github.com/jwilber/Bob_Ross_Paintings/blob/master/data/bob_ross_paintings.csv) via @frankiethull [{BobRossColors}](https://github.com/frankiethull/BobRossColors) data package.
