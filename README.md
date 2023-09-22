@@ -10,6 +10,14 @@ Be careful when running my scripts, most of them were made in less than 24 hrs.
 Questions, criticism, and opinions are more than welcome. 🧉
 
 
+## 2023-09-12 A day in a life
+
+>The data this week comes from the [The Human Chronome Project](https://www.humanchronome.org/) an initiative based at McGill University in Montreal, from their paper [The global human day in PNAS](https://www.pnas.org/doi/10.1073/pnas.2219564120#sec-2) and the associated dataset on Zenodo.
+
+>The daily activities of ≈8 billion people occupy exactly 24 h per day, placing a strict physical limit on what changes can be achieved in the world. These activities form the basis of human behavior, and because of the global integration of societies and economies, many of these activities interact across national borders. This project estimates how all humans spend their time using a generalized, physical outcome–based categorization that facilitates the integration of data from hundreds of diverse datasets.
+
+[![](plot-images/2023-09-12-day-in-a-life.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-09-12-day_in_a_life.R)
+
 ## 2023-03-11 US Egg Production
 
 
