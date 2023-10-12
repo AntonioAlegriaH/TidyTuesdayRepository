@@ -10,6 +10,14 @@ Be careful when running my scripts, most of them were made in less than 24 hrs.
 Questions, criticism, and opinions are more than welcome. 🧉
 
 
+## 2023-10-10
+
+>Halloween is coming soon, so we're exploring a spooky dataset: a compilation of Haunted Places in the United States. 
+The dataset was [compiled by Tim Renner](https://github.com/timothyrenner/shadowlands-haunted-places), using [The Shadowlands Haunted Places Index](https://www.theshadowlands.net/places/), and [shared on data.world](https://data.world/timothyrenner/haunted-places).
+
+[![](plot-images/2023-10-10-most-haunted.png)]()
+
+
 ## 2023-09-12 A day in a life
 
 >The data this week comes from the [The Human Chronome Project](https://www.humanchronome.org/) an initiative based at McGill University in Montreal, from their paper [The global human day in PNAS](https://www.pnas.org/doi/10.1073/pnas.2219564120#sec-2) and the associated dataset on Zenodo.
