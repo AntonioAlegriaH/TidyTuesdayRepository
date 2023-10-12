@@ -16,6 +16,7 @@ Questions, criticism, and opinions are more than welcome. 🧉
 The dataset was [compiled by Tim Renner](https://github.com/timothyrenner/shadowlands-haunted-places), using [The Shadowlands Haunted Places Index](https://www.theshadowlands.net/places/), and [shared on data.world](https://data.world/timothyrenner/haunted-places).
 
 Note: Labels were made in Figma.
+Another note: HOW ABOUT THAT RAYSHADER SHPERE!!!!!!!!🤯🤯🤯🤯🤯🤯🤯🤯🤯
 
 [![](plot-images/2023-10-10-most-haunted.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-10-10-most-haunted.R)
 
