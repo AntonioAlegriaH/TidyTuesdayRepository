@@ -15,7 +15,9 @@ Questions, criticism, and opinions are more than welcome. 🧉
 >Halloween is coming soon, so we're exploring a spooky dataset: a compilation of Haunted Places in the United States. 
 The dataset was [compiled by Tim Renner](https://github.com/timothyrenner/shadowlands-haunted-places), using [The Shadowlands Haunted Places Index](https://www.theshadowlands.net/places/), and [shared on data.world](https://data.world/timothyrenner/haunted-places).
 
-[![](plot-images/2023-10-10-most-haunted.png)]()
+Note: Labels were made in Figma.
+
+[![](plot-images/2023-10-10-most-haunted.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-10-10-most-haunted.R)
 
 
 ## 2023-09-12 A day in a life
