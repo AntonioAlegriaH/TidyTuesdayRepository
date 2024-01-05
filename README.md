@@ -11,7 +11,7 @@ Questions, criticism, and opinions are more than welcome. 🧉
 
 ## 2023 Contributions
 
-![](images/cover2023)
+![](images/cover2023.png)
 
 
 ## 2023-10-10
