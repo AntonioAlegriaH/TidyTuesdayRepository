@@ -78,6 +78,10 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 [![](plot-images/2023-01-10-feederwatch.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-10-feederwatch.R)
 
 
+## 2022 Contributions
+
+![](images/cover2022.png)
+
 ## 2022-12-13 Retail Sales 🇺🇸📈
  
 > The Monthly State Retail Sales (MSRS) is the Census Bureau's new experimental data product featuring modeled state-level retail sales.
