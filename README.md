@@ -9,6 +9,9 @@ You can Join the R4DS Online Learning Community in the weekly  [#TidyTuesday](ht
 
 Questions, criticism, and opinions are more than welcome. 🧉
 
+## Year
+### | [2022](https://github.com/AntonioAlegriaH/TidyTuesdayRepository?tab=readme-ov-file#2022-contributions) | [2023](https://github.com/AntonioAlegriaH/TidyTuesdayRepository?tab=readme-ov-file#2023-contributions) |
+
 ## 2023 Contributions
 
 ![](images/cover2023.png)
