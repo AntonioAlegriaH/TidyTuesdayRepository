@@ -19,7 +19,7 @@ Questions, criticism, and opinions are more than welcome. 🧉
 
 >Happy Leap Day! This week's data comes from the February 29 article on Wikipedia.
 
-[![](plot-images/2024-02-27-leap-year.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2024-02-27-leap-year.R)
+[![](plot-images/2024-02-27-leap-year.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2024-02-27-leap-year.R)
 
 
 ## 2023 Contributions
@@ -35,7 +35,7 @@ The dataset was [compiled by Tim Renner](https://github.com/timothyrenner/shadow
 Note: Labels were made in Figma.
 Another note: HOW ABOUT THAT RAYSHADER SHPERE!!!!!!!!🤯🤯🤯🤯🤯🤯🤯🤯🤯
 
-[![](plot-images/2023-10-10-most-haunted.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-10-10-most-haunted.R)
+[![](plot-images/2023-10-10-most-haunted.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-10-10-most-haunted.R)
 
 
 ## 2023-09-12 A day in a life
@@ -44,7 +44,7 @@ Another note: HOW ABOUT THAT RAYSHADER SHPERE!!!!!!!!🤯🤯🤯🤯🤯🤯�
 
 >The daily activities of ≈8 billion people occupy exactly 24 h per day, placing a strict physical limit on what changes can be achieved in the world. These activities form the basis of human behavior, and because of the global integration of societies and economies, many of these activities interact across national borders. This project estimates how all humans spend their time using a generalized, physical outcome–based categorization that facilitates the integration of data from hundreds of diverse datasets.
 
-[![](plot-images/2023-09-12-day-in-a-life.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-09-12-day_in_a_life.R)
+[![](plot-images/2023-09-12-day-in-a-life.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-09-12-day_in_a_life.R)
 
 ## 2023-03-11 US Egg Production
 
@@ -54,7 +54,7 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 >In this project, they synthesize an analysis-ready data set that tracks cage-free hens and the supply of cage-free eggs relative to the overall numbers of hens and table eggs in the United States. The data set is based on reports produced by the United States Department of Agriculture (USDA), which are published weekly or monthly. 
 
 
-[![](plot-images/2023-03-11-us-eggs-production.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-03-11-us_egg_production.R)
+[![](plot-images/2023-03-11-us-eggs-production.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-03-11-us_egg_production.R)
 
 
 ## 2023-02-21 Bob Ross Paintings
@@ -64,7 +64,7 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 
 [R4DS Repo](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-02-21/readme.md)
 
-[![](plot-images/2023-02-21-bob-ross-colors.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-02-21-bob_ross_colors.R)
+[![](plot-images/2023-02-21-bob-ross-colors.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-02-21-bob_ross_colors.R)
 
 
 
@@ -76,7 +76,7 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 
 
 
-[![](plot-images/2023-01-31-pet-cats-uk.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-31-cats_uk_dash.Rmd)
+[![](plot-images/2023-01-31-pet-cats-uk.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-01-31-cats_uk_dash.Rmd)
 
 
 [Dashboard Access](https://bit.ly/3Xa6iOf) 
@@ -88,7 +88,7 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 
 [R4DS Repo](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-10/readme.md)
 
-[![](plot-images/2023-01-10-feederwatch.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidy_tuesday_2023-01-10-feederwatch.R)
+[![](plot-images/2023-01-10-feederwatch.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidy_tuesday_2023-01-10-feederwatch.R)
 
 
 ## 2022 Contributions
@@ -101,5 +101,5 @@ The data this week comes from [The Humane League's US Egg Production](https://th
 
 [R4DS Repo](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-13)
 
-[![](plot-images/2022-12-13-retail-sales.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/tidytuesday_2022-12-13-retail-sales.R)
+[![](plot-images/2022-12-13-retail-sales.png)](https://github.com/AntonioAlegriaH/TidyTuesdayRepository/blob/main/scripts/tidytuesday_2022-12-13-retail-sales.R)
 
